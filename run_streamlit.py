@@ -16,6 +16,7 @@ from scheduling_flow_match_euler_discrete import FlowMatchEulerDiscreteScheduler
 from autoencoder_kl_wan import AutoencoderKLWan
 from longcat_video_dit import LongCatVideoTransformer3DModel
 
+
 def torch_gc():
     torch.cuda.empty_cache()
     torch.cuda.ipc_collect()
@@ -175,7 +176,7 @@ def main():
             num_cond_frames = 13
         
         # Generate button
-        generate_btn = st.button("🎬 Generate", type="primary", width='stretch')
+        generate_btn = st.button("🎬 Generate", type="primary", use_container_width=True)
     
     with col2:
         st.subheader("🎥 Output")
