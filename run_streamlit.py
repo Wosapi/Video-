@@ -10,12 +10,11 @@ from PIL import Image
 from transformers import AutoTokenizer, UMT5EncoderModel
 from diffusers.utils import export_to_video, load_image, load_video
 
-from longcat_video.context_parallel import context_parallel_util
-from longcat_video.pipeline_longcat_video import LongCatVideoPipeline
-from longcat_video.modules.scheduling_flow_match_euler_discrete import FlowMatchEulerDiscreteScheduler
-from longcat_video.modules.autoencoder_kl_wan import AutoencoderKLWan
-from longcat_video.modules.longcat_video_dit import LongCatVideoTransformer3DModel
-
+import context_parallel_util
+from pipeline_longcat_video import LongCatVideoPipeline
+from scheduling_flow_match_euler_discrete import FlowMatchEulerDiscreteScheduler
+from autoencoder_kl_wan import AutoencoderKLWan
+from longcat_video_dit import LongCatVideoTransformer3DModel
 
 def torch_gc():
     torch.cuda.empty_cache()
